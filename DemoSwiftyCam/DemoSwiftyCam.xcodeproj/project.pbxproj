@@ -24,6 +24,8 @@
 		1675A9901E00A74A00B80903 /* SwiftyCamViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1675A98C1E00A74A00B80903 /* SwiftyCamViewControllerDelegate.swift */; };
 		168505E81E288B4C005B4537 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168505E71E288B4C005B4537 /* VideoViewController.swift */; };
 		168505EA1E288D80005B4537 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168505E91E288D80005B4537 /* PhotoViewController.swift */; };
+		C1A1BA211FCEC2C40063AE95 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A1BA201FCEC2C40063AE95 /* GridView.swift */; };
+		C1A1BA221FCEC2D10063AE95 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A1BA201FCEC2C40063AE95 /* GridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,7 @@
 		1675A98C1E00A74A00B80903 /* SwiftyCamViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyCamViewControllerDelegate.swift; path = ../../Source/SwiftyCamViewControllerDelegate.swift; sourceTree = "<group>"; };
 		168505E71E288B4C005B4537 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		168505E91E288D80005B4537 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		C1A1BA201FCEC2C40063AE95 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				1675A9891E00A74A00B80903 /* PreviewView.swift */,
+				C1A1BA201FCEC2C40063AE95 /* GridView.swift */,
 				1675A98A1E00A74A00B80903 /* SwiftyCamButton.swift */,
 				1675A98B1E00A74A00B80903 /* SwiftyCamViewController.swift */,
 				1675A98C1E00A74A00B80903 /* SwiftyCamViewControllerDelegate.swift */,
@@ -184,7 +188,7 @@
 					};
 					1675A9711E00A68300B80903 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = DGV5BLXSF9;
+						DevelopmentTeam = 2E3PK56V7J;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -236,6 +240,7 @@
 				05D2A9BC1E80BE9D00B479E9 /* PreviewView.swift in Sources */,
 				05D2A9BF1E80BE9D00B479E9 /* SwiftyCamViewControllerDelegate.swift in Sources */,
 				05D2A9BE1E80BE9D00B479E9 /* SwiftyCamViewController.swift in Sources */,
+				C1A1BA221FCEC2D10063AE95 /* GridView.swift in Sources */,
 				05D2A9BD1E80BE9D00B479E9 /* SwiftyCamButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +257,7 @@
 				168505EA1E288D80005B4537 /* PhotoViewController.swift in Sources */,
 				16298B561E2703DC0056D413 /* SwiftyRecordButton.swift in Sources */,
 				1675A98D1E00A74A00B80903 /* PreviewView.swift in Sources */,
+				C1A1BA211FCEC2C40063AE95 /* GridView.swift in Sources */,
 				1675A98E1E00A74A00B80903 /* SwiftyCamButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,7 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DGV5BLXSF9;
+				DEVELOPMENT_TEAM = 2E3PK56V7J;
 				INFOPLIST_FILE = DemoSwiftyCam/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -436,7 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DGV5BLXSF9;
+				DEVELOPMENT_TEAM = 2E3PK56V7J;
 				INFOPLIST_FILE = DemoSwiftyCam/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

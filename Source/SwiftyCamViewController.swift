@@ -100,6 +100,18 @@ open class SwiftyCamViewController: UIViewController {
 	/// Video capture quality
 
 	public var videoQuality : VideoQuality       = .high
+    
+    
+    /// Sets whenther to show grid
+    public var showGrid : Bool = false {
+        didSet
+        {
+            let alpha:CGFloat = (showGrid == true) ? 1.0 : 0.0
+            UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+                self.gridView.alpha = alpha
+            }, completion: nil)
+        }
+    }
 
 	/// Sets whether flash is enabled for photo and video capture
 
@@ -230,6 +242,10 @@ open class SwiftyCamViewController: UIViewController {
 	/// PreviewView for the capture session
 
 	fileprivate var previewLayer                 : PreviewView!
+    
+    /// Grid View
+    
+    fileprivate var gridView                     : GridView!
 
 	/// UIView for front facing flash
 
@@ -256,8 +272,15 @@ open class SwiftyCamViewController: UIViewController {
 	override open func viewDidLoad() {
 		super.viewDidLoad()
         previewLayer = PreviewView(frame: view.frame, videoGravity: videoGravity)
+        gridView = GridView.init(frame: previewLayer.bounds)
+        gridView.isUserInteractionEnabled = false
+        gridView.numberOfColumns = 2
+        gridView.numberOfRows = 2
+        gridView.alpha = (showGrid == true) ? 1.0 : 0.0
         view.addSubview(previewLayer)
         view.sendSubview(toBack: previewLayer)
+        
+        view.insertSubview(gridView, aboveSubview: previewLayer)
 
 		// Add Gesture Recognizers
         
@@ -300,6 +323,7 @@ open class SwiftyCamViewController: UIViewController {
         layer.videoOrientation = orientation
         
         previewLayer.frame = self.view.bounds
+        gridView.frame = previewLayer.bounds
         
     }
     

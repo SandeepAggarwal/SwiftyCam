@@ -21,10 +21,21 @@ class ViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
     @IBOutlet weak var captureButton: SwiftyRecordButton!
     @IBOutlet weak var flipCameraButton: UIButton!
     @IBOutlet weak var flashButton: UIButton!
+    var gridButton: UIButton!
     
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        
+        let width:CGFloat = 40.0, height:CGFloat = 44.0
+        let x:CGFloat = (view.bounds.size.width - width) * 0.5
+        let y:CGFloat = 20.0
+        
+        gridButton = UIButton.init(frame: CGRect.init(x: x, y: y, width: width, height: height))
+        gridButton.setImage(UIImage.init(named: "grid"), for: UIControlState.normal)
+        gridButton.addTarget(self, action: #selector(gridTapped), for: UIControlEvents.touchDown)
+        view.addSubview(gridButton)
+        
 		cameraDelegate = self
 		maximumVideoDuration = 10.0
         shouldUseDeviceOrientation = true
@@ -112,6 +123,11 @@ class ViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
         } else {
             flashButton.setImage(#imageLiteral(resourceName: "flashOutline"), for: UIControlState())
         }
+    }
+    
+    @objc func gridTapped()
+    {
+        showGrid = !showGrid
     }
 }
 
