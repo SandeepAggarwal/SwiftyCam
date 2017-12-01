@@ -1232,6 +1232,18 @@ extension SwiftyCamViewController {
         panGesture.delegate = self
         previewLayer.addGestureRecognizer(panGesture)
 	}
+    
+    /**
+         returns Resolution of captured video at given URL
+        - Parameter url: URL for local video
+        - Returns: CGSize for the video at URL - url
+     */
+    public func resolutionForLocalVideo(url:URL) -> CGSize?
+    {
+        guard let track = AVURLAsset(url: url).tracks(withMediaType: AVMediaTypeVideo).first else { return nil }
+        let size = track.naturalSize.applying(track.preferredTransform)
+        return CGSize(width: fabs(size.width), height: fabs(size.height))
+    }
 }
 
 
