@@ -99,7 +99,12 @@ open class SwiftyCamViewController: UIViewController {
 
 	/// Video capture quality
 
-	public var videoQuality : VideoQuality       = .high
+    public var videoQuality : VideoQuality       = .high {
+        didSet
+        {
+            configureVideoPreset()
+        }
+    }
     
     
     /// Sets whenther to show grid
